@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+   <title>Introdução ao CSS</title>
+   <meta charset="UTF-8">
+   <meta name="author" content="Raphaela Simões">
+   <link rel="stylesheet" href="Introdução ao CSS.css">
+</head>
+
+<body>
+
+   <h1> Introdução ao CSS</h1>
+
+   <hr>
+
+   <h2 class="Titulos">Sintaxe</h2>
+
+   <p><b>&nbsp;&nbsp;&nbspregra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declaração</b></p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓
+   </p>
+   <p><span style="color: rgb(207, 5, 157);">Seletor&#123;</span>
+      <span style="color: rgb(45, 119, 255);">propriedade</span>
+      <span style="color: rgb(207, 5, 157)">:</span>
+      <span style="color: rgb(45, 119, 255);">valor</span>
+      <span style="color: rgb(207, 5, 157);">;&#125;</span>
+   </p>
+   <ul>
+      <li> <b>Seletor</b>: Determina quais elementos HTML serão estilizados.</li>
+      <li> <b>Propriedade</b>: Especifica o aspecto do estilo que você deseja modificar (por exemplo, cor, tamanho de
+         fonte, margem, etc.).</li>
+      <li> <b>Valor</b>: Define o valor que será atribuído à propriedade, como a cor, o tamanho, o tipo de fonte, etc.
+      </li>
+      <li> <b>Declaração</b>: É a combinação de uma propriedade e seu valor. As declarações são terminadas com um ponto
+         e vírgula (;).</li>
+   </ul>
+   <p>P.ex:<b><span style="color:rgb(207, 5, 157);"> h1&#123;</span>
+         <span style="color: rgb(45, 119, 255);">color</span>
+         <span style="color: rgb(207, 5, 157)">:</span>
+         <span style="color: rgb(45, 119, 255);">red</span>
+         <span style="color: rgb(207, 5, 157);">;&#125;</span></b>
+   </p>
+   <hr>
+   <h2 class="Titulos"> Como vincular os arquivos </h2>
+   <p>Para vincular um arquivo <b>CSS</b> externo a um documento <b>HTML</b>, você precisa usar a tag
+      <b>&lt;link&gt;</b> dentro da seção <b>&lt;head&gt;</b> do seu arquivo HTML.
+   </p>
+   <p>Essa tag conecta o arquivo CSS ao HTML, permitindo que o CSS estilize o conteúdo da página.</p>
+   <p><b>No arquivo HTML, adicione a seguinte linha no &lt;head&gt;:</b></p>
+   <ul>
+      <li>&lt;link&gt; rel="stylesheet" href="arquivo.css"&gt;</li>
+   </ul>
+   <hr>
+   <h2 class="Titulos">Principais propriedades do CSS</h2>
+   <h3 class="Subtitulos">Tipos de fontes</h3>
+   <ul>
+      <li><b>Font-family</b>: Define a família da fonte utilizada. </li>
+      <li><b>Font-size</b>: Define a propriedades de estilos que podem ser: normal, italic ou oblique. </li>
+      <li><b>Font-style</b>: Define o tamanho da fonte. </li>
+   </ul>
+   <h3 class="Subtitulos">Text-transform</h3>
+   <p>Controla os efeitos de capitalização do texto. Com ela, podemos definir a caixa das letras (minúsculas e
+      maiusculas). Os valores possíveis são:</p>
+   <ul>
+      <li><b>capitalize</b>:Capitalize transforma o primeiro caracter de cada palavra em maiúscula.</li>
+      <li><b>uppercase</b>:Transforma todas as letras de todas as palavras em maiúsculas </li>
+      <li><b>lowercase</b>:Transforma todas as letras de todas as palavras em minúsculas</li>
+      <li><b>none</b>:Cancela algum valor que tenha sido herdado</li>
+   </ul>
+
+   <h3 class="Subtitulos">Seletores: classe e ID</h3>
+
+   <p>Class</p>
+   <ul>
+      <li> Começa com um <b> . </b> (caractere ponto). Ele selecionará tudo no documento com essa classe aplicada a ele.
+         Todos os elementos que têm a classe aplicada são destacados</li>
+   </ul>
+
+   <p>Id</p>
+   <ul>
+      <li>começa com um # (caractere) em vez de um (.) ponto, mas é usado da mesma forma que um seletor de classe. No
+         entanto, <strong>ID pode ser usado apenas uma vez por página, e os
+            elementos podem ter apenas um único id valor aplicado a eles</strong> . Ele pode selecionar um elemento que
+         tenha o id conjunto nele, e você pode preceder o ID com um seletor de tipo
+         para direcionar o elemento somente se o elemento e o ID corresponderem</li>
+   </ul>
+
+   <h2>Box Model</h2>
+
+   <p>O Box Model começa com o conteúdo como ponto de partida porque ele é a parte essencial e mais interna do elemento, onde o conteúdo real, como texto ou imagens, é colocado. Esse foco no conteúdo facilita o controle sobre como ele será exibido e como será ajustado para comportar o layout ao redor dele. A borda e outros elementos do Box Model (padding e margem) são camadas externas adicionadas ao conteúdo para controlar a aparência e o espaçamento.</p>
+
+
+   <p>&nbsp;┌────────────────────────┐</p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Margin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;┌────────────────────┐&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Border&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;┌─────────────────┐&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Padding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;┌─────────────┐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;└─────────────┘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;└─────────────────┘&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;│&nbsp;&nbsp;&nbsp;└────────────────────┘&nbsp;&nbsp;&nbsp;│
+   <p>
+   <p>&nbsp;└────────────────────────┘
+   <p>
+
+      <h3>Content (Conteúdo)</h3>
+      <ul>
+         <li>Esta é a área onde o conteúdo real do elemento é colocado (texto, imagem, etc.).</li>
+         <li>A largura e altura definidas de um elemento geralmente se referem a essa área. </li>
+      </ul>
+
+<h3>Padding (Preenchimento)</h3>
+<ul>
+   <li>Espaço entre o conteúdo do elemento e sua borda.</li>
+   <li>Padding aumenta o tamanho da caixa total, pois empurra a borda para fora</li>
+   <li>Pode ser definido individualmente para cada lado (topo, direita, baixo, esquerda).</li>
+</ul>
+
+<h3>Border (Borda)</h3>
+   <ul>
+      <li>Envolve o conteúdo e o padding, criando uma borda ao redor do elemento.<li>
+      <li>Pode ser personalizada em termos de largura (border-width), estilo (border-style, como sólida, tracejada, etc.) e cor (border-color).</li>
+   </ul>
+
+   <h3>Margin (Margem)</h3>
+   <ul>
+      <li>Espaço entre a borda do elemento e os elementos vizinhos.</li>
+      <li>Pode ser usado para criar espaçamento externo e afastar elementos uns dos outros.</li>
+      <li>Também pode ser definido individualmente para cada lado do elemento.</li>
+   </ul>
+
+   
+
+
+  
+
+</body>
+
+</html>
